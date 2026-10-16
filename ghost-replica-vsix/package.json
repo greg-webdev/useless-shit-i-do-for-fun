@@ -1,0 +1,62 @@
+{
+  "name": "ghost-replica",
+  "displayName": "GhostReplica: Slow Folder Retyper & Input Simulator",
+  "description": "Authentic physical OS-level mouse movement and keystroke simulation engine for recreating codebases",
+  "version": "1.0.0",
+  "publisher": "antigravity",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Education"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:ghostReplica.openPanel"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "ghostReplica.openPanel",
+        "title": "GhostReplica: Open Slow Folder Retyper",
+        "category": "GhostReplica"
+      }
+    ],
+    "configuration": {
+      "title": "GhostReplica",
+      "properties": {
+        "ghostReplica.defaultMinTypeDelayMs": {
+          "type": "number",
+          "default": 35,
+          "description": "Default minimum delay between keystrokes in milliseconds"
+        },
+        "ghostReplica.defaultMaxTypeDelayMs": {
+          "type": "number",
+          "default": 120,
+          "description": "Default maximum delay between keystrokes in milliseconds"
+        },
+        "ghostReplica.defaultMouseSpeedMs": {
+          "type": "number",
+          "default": 600,
+          "description": "Default mouse traversal duration in milliseconds"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "build:engine": "dotnet publish engine_src/automation_engine.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o bin",
+    "build": "npm run compile && npm run build:engine",
+    "package": "npx @vscode/vsce package --no-dependencies",
+    "test:e2e": "node test/e2e_verify.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^4.0.0",
+    "typescript": "^5.3.3"
+  }
+}
