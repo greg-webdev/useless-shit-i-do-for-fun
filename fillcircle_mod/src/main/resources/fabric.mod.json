@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "fillcircle",
+	"version": "${version}",
+	"name": "FillCircle",
+	"description": "Adds the /fillcircle command to Minecraft 1.21.11 Fabric servers.",
+	"authors": [
+		"User"
+	],
+	"contact": {},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.fillcircle.FillCircleMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "mergedmod",
+	"version": "${version}",
+	"name": "Server Utility Mod",
+	"description": "Unified Fabric server mod combining /fling, /fillcircle, /loginmsg, /tnt control GUI, and /backupworld /backups system.",
+	"authors": [
+		"User"
+	],
+	"contact": {},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mergedmod.MergedMod"
+		]
+	},
+	"mixins": [
+		"mergedmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

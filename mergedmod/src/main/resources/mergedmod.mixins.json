@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.mergedmod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PrimedTntMixin",
+    "MinecartTntMixin",
+    "EntityCollisionMixin",
+    "MobAiMixin",
+    "ItemEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

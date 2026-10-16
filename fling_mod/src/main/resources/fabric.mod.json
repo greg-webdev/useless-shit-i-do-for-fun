@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "fling",
+	"version": "${version}",
+	"name": "Fling Command",
+	"description": "Server-side /fling command and launch pad system for Minecraft 1.21.11 Fabric servers.",
+	"authors": [
+		"User"
+	],
+	"contact": {},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.fling.FlingMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

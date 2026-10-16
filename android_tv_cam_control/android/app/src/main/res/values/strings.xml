@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Capture &amp; Remote</string>
+    <string name="accessibility_service_description">Enables system-wide TV remote control, global navigation (Home, Back, Volume), and remote touchpad mouse clicks across Android TV apps.</string>
+</resources>
